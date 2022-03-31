@@ -1,0 +1,574 @@
+<!DOCTYPE html><html><head>
+      <title>notes</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\juhat\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.2\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#141414;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="git-related-learning-resources">Git related learning resources</h1>
+
+<p>Cheat Sheets &amp; Learning resources combined from different sources.</p>
+<blockquote>
+<p>Own notes highlighted this way.</p>
+</blockquote>
+<hr>
+<h2 class="mume-header" id="git">Git</h2>
+
+<p><strong><em>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.<br>
+Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.</em></strong> <a href="https://git-scm.com">-Git</a></p>
+<h2 class="mume-header" id="github">GitHub</h2>
+
+<p><strong><em>GitHub is a web-based Git repository hosting service, which offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features.</em></strong> <a href="https://www.geeksforgeeks.org/difference-between-git-and-github/">-GeeksForGeeks</a></p>
+<hr>
+<h2 class="mume-header" id="learning-resources">Learning Resources</h2>
+
+<h3 class="mume-header" id="cheat-sheets">Cheat sheets</h3>
+
+<h4 class="mume-header" id="atlassian-git-cheat-sheet">Atlassian Git Cheat Sheet</h4>
+
+<ul>
+<li><a href="chrome-extension://ihgdgpjankaehldoaimdlekdidkjfghe/viewer.html#https://wac-cdn.atlassian.com/dam/jcr:e7e22f25-bba2-4ef1-a197-53f46b6df4a5/SWTM-2088_Atlassian-Git-Cheatsheet.pdf?cdnVersion=289">Atlassian Git Cheat Sheet</a></li>
+</ul>
+<h4 class="mume-header" id="github-cheat-sheet">GitHub cheat sheet</h4>
+
+<ul>
+<li><a href="chrome-extension://ihgdgpjankaehldoaimdlekdidkjfghe/viewer.html#https://education.github.com/git-cheat-sheet-education.pdf">GitHub Cheat Sheet</a></li>
+</ul>
+<h4 class="mume-header" id="git-cheat-sheet">Git cheat sheet</h4>
+
+<ul>
+<li><a href="https://training.github.com">Git Cheat Sheet PDF - topic related cheat sheets</a></li>
+<li><a href="https://ndpsoftware.com/git-cheatsheet.html">Interactive/Visual Cheat Sheet</a></li>
+</ul>
+<h3 class="mume-header" id="free-learning-resources">Free Learning Resources</h3>
+
+<h4 class="mume-header" id="atlassian-git-tutorial">Atlassian Git Tutorial</h4>
+
+<ul>
+<li><a href="https://www.atlassian.com/git/tutorials">Become a git guru.</a></li>
+</ul>
+<h4 class="mume-header" id="microsoft-learning">Microsoft Learning</h4>
+
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/learn/modules/introduction-to-github/">Introduction to GitHub</a></li>
+</ul>
+<h4 class="mume-header" id="udemy">Udemy</h4>
+
+<ul>
+<li><a href="https://www.udemy.com/course/learngit/">Learn Git: Everything You Need To Know</a></li>
+</ul>
+<h4 class="mume-header" id="freecodecamp">freeCodeCamp</h4>
+
+<ul>
+<li><a href="https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/">Learn the Basics of Git in under 10 minutes</a></li>
+<li><a href="https://www.freecodecamp.org/news/git-and-github-for-beginners/">Git and GitHub Tutorial - Version Control for Beginners</a></li>
+</ul>
+<h4 class="mume-header" id="w3schools">w3Schools</h4>
+
+<ul>
+<li><a href="https://www.w3schools.com/git/default.asp">Git Tutorial</a></li>
+</ul>
+<h4 class="mume-header" id="learn-git-branching-interactive-tutorial">Learn Git Branching - Interactive tutorial</h4>
+
+<ul>
+<li><a href="https://learngitbranching.js.org">Learn Git Branching</a></li>
+</ul>
+<h4 class="mume-header" id="github-learning-lab">GitHub Learning Lab</h4>
+
+<ul>
+<li><a href="https://lab.github.com">Github Learning Lab</a></li>
+</ul>
+<h4 class="mume-header" id="git-tower">Git Tower</h4>
+
+<ul>
+<li><a href="https://www.git-tower.com/learn/git/ebook/">Learn Version Control with Git</a></li>
+</ul>
+<h4 class="mume-header" id="udacity">Udacity</h4>
+
+<ul>
+<li><a href="https://www.udacity.com/course/version-control-with-git--ud123">Version Control with Git</a></li>
+</ul>
+<h4 class="mume-header" id="gitkraken">GitKraken</h4>
+
+<ul>
+<li><a href="https://www.gitkraken.com/learn/git">Learn Git - Commands, Tutorials &amp; More</a></li>
+</ul>
+<h4 class="mume-header" id="eduonix">Eduonix</h4>
+
+<ul>
+<li><a href="https://www.eduonix.com/git-for-beginners">GIT for beginners</a></li>
+</ul>
+<h4 class="mume-header" id="git-immersion">Git Immersion</h4>
+
+<ul>
+<li><a href="https://gitimmersion.com">A guided tour that walks through the fundamentals of Git, inspired by the premise that to know a thing is to do it</a></li>
+</ul>
+<h4 class="mume-header" id="visual-git-reference-mark-lodato">Visual Git Reference - Mark Lodato</h4>
+
+<ul>
+<li><a href="https://marklodato.github.io/visual-git-guide/index-en.html">A Visual Git Reference</a></li>
+</ul>
+<hr>
+<h2 class="mume-header" id="notes-of-common-git-commands">Notes of common Git commands</h2>
+
+<h3 class="mume-header" id="setupconfig"><code>Setup/Config</code></h3>
+
+<h4 class="mume-header" id="git-config-documentationhttpswwwgit-scmcomdocsgit-config"><a href="https://www.git-scm.com/docs/git-config">Git config documentation</a></h4>
+
+<h4 class="mume-header" id="git-config-global-username-firstname-lastname"><code>git config --global user.name &quot;[firstname lastname]&quot;</code></h4>
+
+<ul>
+<li>Set a name that is identifiable for credit within version history review.</li>
+</ul>
+<h4 class="mume-header" id="git-config-global-useremail-valid-email"><code>git config --global user.email &quot;[valid-email]&quot;</code></h4>
+
+<ul>
+<li>Set an email address that will be associated with each history marker.</li>
+</ul>
+<h4 class="mume-header" id="git-config-global-colorui-auto"><code>git config --global color.ui auto</code></h4>
+
+<ul>
+<li>Set automatic command line coloring for Git for easy reviewing.</li>
+</ul>
+<h4 class="mume-header" id="git-init-directory"><code>git init &lt;directory&gt;</code></h4>
+
+<ul>
+<li>Create empty Git repo in specified directory.</li>
+<li><code>git init</code> without directory will initialize the current directory as git repository.</li>
+</ul>
+<h4 class="mume-header" id="git-clone-repo"><code>git clone &lt;repo&gt;</code></h4>
+
+<ul>
+<li>Clone repo located at &lt;\repo&gt; onto local machine.</li>
+<li>Original repo can be located on the local filesystem or on a remote machine via HTTP or SSH.</li>
+<li>Eg. cloning repo from GitHub, the original repo is on remote machine.</li>
+</ul>
+<hr>
+<h3 class="mume-header" id="stage-snapshot"><code>Stage &amp; Snapshot</code></h3>
+
+<h4 class="mume-header" id="git-add-directory"><code>git add &lt;directory&gt;</code></h4>
+
+<ul>
+<li>Define author name to be used for all commits in current repo.</li>
+<li>Devs commonly use <code>--global</code> flag to set config options for current user.</li>
+<li><a href="https://www.git-scm.com/docs/git-add">git-scm.com/docs/git-add</a></li>
+</ul>
+<h4 class="mume-header" id="git-commit-m-message"><code>git commit -m &lt;message&gt;</code></h4>
+
+<ul>
+<li>Commit the staged snapshot.</li>
+<li>With <code>&lt;message&gt;</code> one can avoid opening text editor and typing commit message.</li>
+<li><a href="https://www.git-scm.com/docs/git-commit">git-scm.com/docs/git-commit</a></li>
+</ul>
+<h4 class="mume-header" id="git-status"><code>git status</code></h4>
+
+<ul>
+<li>List which files are staged, unstaged, and untracked.</li>
+<li><a href="https://www.git-scm.com/docs/git-status">git-scm.com/docs/git-status</a></li>
+</ul>
+<h4 class="mume-header" id="git-log"><code>git log</code></h4>
+
+<ul>
+<li>Display the entire commit history using the default format.</li>
+<li><a href="https://www.git-scm.com/docs/git-log">git-scm.com/docs/git-log</a></li>
+</ul>
+<h4 class="mume-header" id="git-diff"><code>git diff</code></h4>
+
+<ul>
+<li>In overall, show changes between commits, commit and working tree, etc</li>
+<li>Show unstaged changes between your index and working directory.</li>
+<li>In other words, the differences are what you could tell Git to further add to the index but you still haven&#x2019;t.</li>
+<li><a href="https://www.git-scm.com/docs/git-diff">git-scm.com/docs/git-diff</a></li>
+</ul>
+<hr>
+<h3 class="mume-header" id="undoing-changes"><code>Undoing Changes</code></h3>
+
+<h4 class="mume-header" id="git-revert-commit"><code>git revert &lt;commit&gt;</code></h4>
+
+<ul>
+<li>Create new commit that undoes all of the changes made in <code>&lt;commit&gt;</code>, then apply it to the current branch.</li>
+<li><a href="https://www.git-scm.com/docs/git-revert">git-scm.com/docs/git-revert</a></li>
+</ul>
+<blockquote>
+<p>One can choose commit, undo current changes and apply selected commit changes to current working branch.?</p>
+</blockquote>
+<h4 class="mume-header" id="git-reset-file"><code>git reset &lt;file&gt;</code></h4>
+
+<ul>
+<li>Remove <code>&lt;file&gt;</code> from the staging area, but leave the working directory unchanged. This unstages a file without overwriting any changes.</li>
+<li><a href="https://www.git-scm.com/docs/git-reset">git-scm.com/docs/git-reset</a></li>
+</ul>
+<blockquote>
+<p>What if though file is imported eg. within other file and used, eg. Javascript project. I guess Git does not pardon my language, dont give a duck about that.</p>
+</blockquote>
+<h4 class="mume-header" id="git-clean-n"><code>git clean -n</code></h4>
+
+<ul>
+<li>Shows which files would be removed from working directory.</li>
+<li>Use the <code>-f</code> flag in place of the <code>-n</code> flag to execute the clean.</li>
+<li><a href="https://www.git-scm.com/docs/git-clean">git-scm.com/docs/git-clean</a></li>
+</ul>
+<hr>
+<h3 class="mume-header" id="rewriting-git-history"><code>Rewriting Git History</code></h3>
+
+<h4 class="mume-header" id="git-commit-amend"><code>git commit --amend</code></h4>
+
+<ul>
+<li>Replace the last commit with the staged changes and last commit combined.</li>
+<li>Use with nothing stage to edit the last commit&apos;s message.</li>
+<li><a href="https://www.git-scm.com/docs/git-commit">git-scm.com/docs/git-commit</a></li>
+</ul>
+<blockquote>
+<p>Last commit replaced with currently staged changes written afterwards to last commit? Somehow difficult explanation to understand.</p>
+</blockquote>
+<h4 class="mume-header" id="git-rebase-base"><code>git rebase &lt;base&gt;</code></h4>
+
+<ul>
+<li>Rebase the current branch onto <code>&lt;base&gt;</code>, <code>&lt;base&gt;</code> can be:
+<ul>
+<li>Commit ID</li>
+<li>Branch name</li>
+<li>A tag</li>
+<li>Relative reference to <code>HEAD</code></li>
+</ul>
+</li>
+<li><a href="https://www.git-scm.com/docs/git-rebase">git-scm.com/docs/git-rebase</a></li>
+</ul>
+<blockquote>
+<p>Find out more later about using git rebase</p>
+</blockquote>
+<h4 class="mume-header" id="git-reflog"><code>git reflog</code></h4>
+
+<ul>
+<li>Show a log of changes to the local repository&apos;s <code>HEAD</code></li>
+<li>Add <code>--relative-date</code> to show date info or <code>--all</code> to show all refs.</li>
+<li><a href="https://www.git-scm.com/docs/git-reflog">git-scm.com/docs/git-reflog</a></li>
+</ul>
+<h3 class="mume-header" id="git-branches"><code>Git Branches</code></h3>
+
+<h4 class="mume-header" id="git-branch"><code>git branch</code></h4>
+
+<ul>
+<li>List all of the branches in your repo</li>
+<li>Add <code>&lt;branch&gt;</code> argument to create a new brnach with the name <code>&lt;branch&gt;</code>.</li>
+<li><a href="https://www.git-scm.com/docs/git-branch">git-scm.com/docs/git-branch</a></li>
+</ul>
+<h4 class="mume-header" id="git-checkout-b"><code>git checkout -b</code></h4>
+
+<ul>
+<li>Create and check out a new branch named <code>&lt;branch&gt;</code>.</li>
+<li>Drop the <code>-b</code> flag to checkout an existing branch.</li>
+<li><a href="https://www.git-scm.com/docs/git-checkout">git-scm.com/docs/git-checkout</a></li>
+</ul>
+<h4 class="mume-header" id="git-merge-branch"><code>git merge &lt;branch&gt;</code></h4>
+
+<ul>
+<li>In overall, join two or more development histories together</li>
+<li>Merge <code>&lt;branch&gt;</code> into the current branch.</li>
+</ul>
+<p><code>Warning: Running git merge with non-trivial uncommitted changes is discouraged: while possible, it may leave you in a state that is hard to back out of in the case of a conflict. - git-scm.com/docs/git-merge</code></p>
+<ul>
+<li><a href="https://www.git-scm.com/docs/git-merge">git-scm.com/docs/git-merge</a></li>
+</ul>
+<hr>
+<h3 class="mume-header" id="remote-repositories"><code>Remote Repositories</code></h3>
+
+<h4 class="mume-header" id="git-remote-add-name-url"><code>git remote add &lt;name&gt; &lt;url&gt;</code></h4>
+
+<ul>
+<li>Create a new connection to a remote repo.</li>
+<li>After adding a remote, you can use <code>&lt;name&gt;</code> as a shortcut for <code>&lt;url&gt;</code> in other commands.</li>
+<li><a href="https://www.git-scm.com/docs/git-remote">git-scm.com/docs/git-remote</a></li>
+</ul>
+<h4 class="mume-header" id="git-fetch-remote-branch"><code>git fetch &lt;remote&gt; &lt;branch&gt;</code></h4>
+
+<ul>
+<li>Fetches a specific <code>&lt;branch&gt;</code>, from the repo.</li>
+<li>Leave off <code>&lt;branch&gt;</code> to fetch all remote refs.</li>
+<li><a href="https://www.git-scm.com/docs/git-fetch">git-scm.com/docs/git-fetch</a></li>
+</ul>
+<h4 class="mume-header" id="git-pull-remote"><code>git pull &lt;remote&gt;</code></h4>
+
+<ul>
+<li>Fetch the specified remote&apos;s copy of current branch and immediately merge it into the local copy.</li>
+<li><a href="https://www.git-scm.com/docs/git-pull">git-scm.com/docs/git-pull</a></li>
+</ul>
+<blockquote>
+<p>I guess one way to always reduce merge conflicts when keeping updated with changes made by team-members on the same branch.</p>
+</blockquote>
+<h4 class="mume-header" id="git-push-remote-branch"><code>git push &lt;remote&gt; &lt;branch&gt;</code></h4>
+
+<ul>
+<li>Push the branch to <code>&lt;remote&gt;</code>, along with necessary commits and objects. Creates named branch in the remote repo if it doesn&apos;t exist.</li>
+<li><a href="https://www.git-scm.com/docs/git-push">git-scm.com/docs/git-push</a></li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
